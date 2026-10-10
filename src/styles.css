@@ -51,13 +51,13 @@
   button, a { -webkit-tap-highlight-color: transparent; }
 }
 
-@layer components {
+
   .reward-page { max-width: 480px; margin: 0 auto; padding: 16px 0 32px; }
   .offer-header { text-align: center; }
   .brand-logo { display: block; width: 112px; height: 112px; object-fit: contain; margin: 0 auto 12px; border-radius: 16px; }
   .offer-title, .section-title { font-size: 24px; font-weight: 700; line-height: 32px; margin: 0; }
   .offer-description { font-size: 14px; line-height: 20px; color: var(--muted-foreground); margin: 6px 8px 12px; }
-  .claim-button.claim-button { display: flex; width: 80%; height: 48px; margin: 0 auto; border-radius: 12px; background: var(--primary); color: var(--primary-foreground); font-size: 18px; font-weight: 700; box-shadow: none; }
+  .claim-button { display: flex; width: 80%; height: 48px; margin: 0 auto; border-radius: 12px; background: var(--primary); color: var(--primary-foreground); font-size: 18px; font-weight: 700; box-shadow: none; }
   .claim-button:hover { background: color-mix(in oklch, var(--primary) 90%, var(--foreground)); }
   .section-title { text-align: center; margin: 24px 0; }
   .steps { display: grid; gap: 20px; }
@@ -76,8 +76,8 @@
   .rating-on { font-size: 14px; color: var(--muted-foreground); }
   .rating-brand { font-size: 16px; font-weight: 700; }
   .faq-list { display: grid; gap: 12px; }
-  .faq-item.faq-item { border: 0; background: var(--card); border-radius: 12px; padding: 0 16px; }
-  .faq-trigger.faq-trigger { padding: 18px 0; font-size: 16px; line-height: 24px; font-weight: 600; text-decoration: none; }
+  .faq-item { border: 0; background: var(--card); border-radius: 12px; padding: 0 16px; }
+  .faq-trigger { padding: 18px 0; font-size: 16px; line-height: 24px; font-weight: 600; text-decoration: none; }
   .faq-trigger:hover { text-decoration: none; color: var(--primary); }
   .faq-answer { font-size: 14px; line-height: 22px; color: var(--muted-foreground); padding-bottom: 20px; }
   .replica-disclosure { margin: 24px 12px 0; color: var(--muted-foreground); text-align: center; font-size: 12px; line-height: 18px; }
@@ -86,7 +86,6 @@
   .claim-dialog-title { font-size: 22px; line-height: 30px; }
   .claim-dialog-description { font-size: 15px; line-height: 24px; }
   .claim-dialog .claim-button { width: 100%; margin-top: 8px; }
-}
 
 @media (max-width: 520px) {
   .reward-page { padding: 16px 16px 28px; }
