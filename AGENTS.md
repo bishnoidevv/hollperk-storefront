@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the reference reward page at the index route, with presentation tokens in the global stylesheet and shared accessible controls; this keeps the replica consistent and keyboard-accessible.
+- Claim buttons open a preview dialog until an authorized reward destination is supplied; never fabricate live rewards or collect personal details.
+- Prebundle React and the reward page's UI dependencies together in Vite; this prevents first-use optimization from leaving open previews with mismatched React instances.
