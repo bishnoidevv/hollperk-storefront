@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { Gift, ListChecks, MousePointerClick, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import aerieLogo from "@/assets/aerie-logo.jpg.asset.json";
+
+const CLAIM_URL = "https://linkthem.net/aff_c?offer_id=3893&aff_id=148566";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,15 +32,22 @@ const questions = [
   { question: "Can I claim the reward multiple times?", answer: "Yes! You can repeat the process and claim rewards multiple times." },
 ];
 
+function ClaimButton() {
+  return (
+    <Button variant="claim" asChild>
+      <a href={CLAIM_URL} target="_blank" rel="noopener noreferrer sponsored">Claim Now</a>
+    </Button>
+  );
+}
+
 function Index() {
-  const [claimOpen, setClaimOpen] = useState(false);
   return (
     <main className="reward-page">
       <header className="offer-header">
         <img className="brand-logo" src={aerieLogo.url} alt="Aerie" width={112} height={112} />
         <h1 className="offer-title">$500 Aerie Giftcard</h1>
         <p className="offer-description">Discover comfy bras, undies, loungewear and activewear made for every body.</p>
-        <Button variant="claim" onClick={() => setClaimOpen(true)}>Claim Now</Button>
+        <ClaimButton />
       </header>
 
       <section aria-labelledby="steps-heading">
@@ -64,7 +71,7 @@ function Index() {
           </div>
           <div className="rating-line"><strong>4.5 / 5</strong><span className="rating-on">on</span><span className="rating-brand">★ Trustpilot</span></div>
         </div>
-        <Button variant="claim" onClick={() => setClaimOpen(true)}>Claim Now</Button>
+        <ClaimButton />
       </section>
 
       <section aria-labelledby="faq-heading">
@@ -78,17 +85,7 @@ function Index() {
           ))}
         </Accordion>
       </section>
-      <footer className="replica-disclosure">Independent design preview. Not affiliated with Aerie or Trustpilot. Offer terms, eligibility, delivery times, and rating shown are reproduced from the reference and are not verified. No rewards are issued here.</footer>
-
-      <Dialog open={claimOpen} onOpenChange={setClaimOpen}>
-        <DialogContent className="claim-dialog">
-          <DialogHeader>
-            <DialogTitle className="claim-dialog-title">Gift card offer preview</DialogTitle>
-            <DialogDescription className="claim-dialog-description">This is an independent recreation of the reference page, not a live gift-card offer. No reward is available to claim, and no personal information is collected.</DialogDescription>
-          </DialogHeader>
-          <DialogClose asChild><Button variant="claim">Back to offer</Button></DialogClose>
-        </DialogContent>
-      </Dialog>
+      <footer className="replica-disclosure">Independent design preview. Not affiliated with Aerie or Trustpilot. Offer terms, eligibility, delivery times, and rating shown are reproduced from the reference and are not verified. The Claim Now buttons open a third-party offer link in a new tab; this page may earn a commission from that link.</footer>
     </main>
   );
 }
