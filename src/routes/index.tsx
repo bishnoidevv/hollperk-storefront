@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Gift, ListChecks, MousePointerClick, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import aerieLogo from "@/assets/aerie-logo.jpg.asset.json";
+import aerieLogo from "@/assets/aerie-logo.jpg";
 
 const CLAIM_URL = "https://linkthem.net/aff_c?offer_id=3893&aff_id=148566";
 
