@@ -44,7 +44,7 @@ function Index() {
   return (
     <main className="reward-page">
       <header className="offer-header">
-        <img className="brand-logo" src={aerieLogo.url} alt="Aerie" width={112} height={112} />
+        <img className="brand-logo" src={aerieLogo} alt="Aerie" width={112} height={112} />
         <h1 className="offer-title">$500 Aerie Giftcard</h1>
         <p className="offer-description">Discover comfy bras, undies, loungewear and activewear made for every body.</p>
         <ClaimButton />
