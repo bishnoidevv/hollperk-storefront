@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Gift, ListChecks, MousePointerClick, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import aerieLogo from "@/assets/aerie-logo.jpg.asset.json";
+import aerieLogo from "@/assets/aerie-logo.jpg";
 
 const CLAIM_URL = "https://linkthem.net/aff_c?offer_id=3893&aff_id=148566";
 
@@ -44,7 +44,7 @@ function Index() {
   return (
     <main className="reward-page">
       <header className="offer-header">
-        <img className="brand-logo" src={aerieLogo.url} alt="Aerie" width={112} height={112} />
+        <img className="brand-logo" src={aerieLogo} alt="Aerie" width={112} height={112} />
         <h1 className="offer-title">$500 Aerie Giftcard</h1>
         <p className="offer-description">Discover comfy bras, undies, loungewear and activewear made for every body.</p>
         <ClaimButton />
