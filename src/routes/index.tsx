@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import aerieLogo from "@/assets/aerie-logo.jpg";
 
-const CLAIM_URL = "https://linkthem.net/aff_c?offer_id=3893&aff_id=148566";
+const CLAIM_URL = "https://linkthem.net/aff_c?offer_id=5299&aff_id=148566";
 
 export const Route = createFileRoute("/")({
   head: () => ({
